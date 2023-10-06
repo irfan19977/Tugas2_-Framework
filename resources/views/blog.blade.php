@@ -1,4 +1,4 @@
 @extends('layout.main')
 @section('content')
-<h1> ini tampilan Home</h1>
+<h1>Ini Halaman Blog</h1>
 @endsection
