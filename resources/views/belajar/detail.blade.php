@@ -1,0 +1,12 @@
+@extends('layout.main')
+@section('content')
+
+<div class="col-md-15 col-sm-12 mb-5 bg-rgb(37, 150, 190) p-0">
+    
+    <div class="p-4">
+        <h2 align="center">{{ $article->judul }} </h2>
+        <img  src="{{ asset('gatau/bgst.jpg') }}" width="250"style="display:block; margin:auto;">
+        <p class="mt-5">{{ $article->deskripsi }}</p>
+    </div>
+</div>
+@endsection

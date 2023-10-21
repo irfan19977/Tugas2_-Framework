@@ -1,27 +1,19 @@
 @extends('layout.main')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-15">
-            <div class="card">
-                <div class="card-header">Artikel</div>
 
-                <div class="card-body">
-                    <table class="table table-striped">
-                        <tr>
-                            <th width=40%>Judul</th>
-                            <th>Deskripsi</th>
-                        </tr>
-                        @foreach ($data_artikel as $item)
-                            <tr>
-                                <td>{{ $item['judul'] }}</td>
-                                <td>{{ $item['deskripsi'] }}</td>
-                            </tr>
-                        @endforeach
-                    </table>
-                </div>
+<div class="row">
+    @foreach($data_artikel as $item)
+    <div class="col-md-4 col-sm-12 mt-4">
+        <div class="card">
+            <img src="{{ asset('gatau/bgst.jpg') }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ $item->judul }}</h5>
+                <a href="/detail/{{ $item->id }}" class="btn btn-primary">Baca Artikel</a>
             </div>
         </div>
     </div>
+    @endforeach
 </div>
+
+                  
 @endsection
