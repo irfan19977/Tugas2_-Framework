@@ -1,7 +1,7 @@
 @extends('layout.main')
 @section('content')
 
-<div class="col-md-15 col-sm-12 mb-5 bg-rgb(37, 150, 190) p-0">
+<div class="col-md-15 col-sm-12 mb-5 bg-white p-0">
     
     <div class="p-4">
         <h2 align="center">{{ $article->judul }} </h2>
