@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ArtikelController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,26 +13,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return 'Hallo saya irfan adi prastyo NIM 21.31.0012';
-});
 
-Route::get('/home', function () {
-    return view('home');
+Route::get('/', function () {
+    return view('belajar/home');
 });
 
 Route::get('/portofolio', function () {
-    return view('portofolio');
+    return view('belajar/portofolio');
 });
 
 Route::get('/about', function () {
-    return view('about', [
+    return view('belajar/about', [
         "name" => "Irfan Adi Prastyo", 
         "email" => "irfanadiprasetyo27@gmail.com",
         "gambar" => "bgst.jpg"
     ]);
 });
 
-Route::get('blog', function () {
-    return view('blog');
+
+
+Route::get('/blog', [ArtikelController::class, 'index'])->name('artikel.index');
+
+
+Route::get('/artikel', function () {
+    return view('belajar/artikel');
 });
+
+Route::get('/artikels', 'ArtikelController@index');
