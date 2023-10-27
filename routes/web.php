@@ -34,11 +34,3 @@ Route::get('/about', function () {
 
 Route::get('/blog', [ArtikelController::class, 'index'])->name('artikel.index');
 Route::get('/detail/{id}', [ArtikelController::class, 'detail'])->name('artikel.detail');
-
-
-
-Route::get('/artikel', function () {
-    return view('belajar/artikel');
-});
-
-Route::get('/artikels', 'ArtikelController@index');
