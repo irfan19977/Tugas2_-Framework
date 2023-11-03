@@ -1,3 +1,4 @@
+@dd($posts)
 @extends('layout.main')
 @section('content')
 
